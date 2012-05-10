@@ -3,7 +3,7 @@ import os
 from project.settings import *
 
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 
@@ -18,7 +18,7 @@ DATABASES = {
 SECRET_KEY = ''
 
 
-WSGI_APPLICATION = 'project.wsgi.development.application'
+WSGI_APPLICATION = 'project.wsgi.jenkins.application'
 
 
 INSTALLED_APPS += ('django_jenkins',)

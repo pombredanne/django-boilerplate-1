@@ -12,7 +12,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(SITE_ROOT, 'development.db'),
         'USER': '',
-        'PASSWORD': ''
+        'PASSWORD': '',
         'HOST': '',
         'PORT': '',
     }
@@ -22,4 +22,4 @@ DATABASES = {
 SECRET_KEY = ''
 
 
-WSGI_APPLICATION = 'project.wsgi.development.application'
+WSGI_APPLICATION = 'project.wsgi.production.application'
