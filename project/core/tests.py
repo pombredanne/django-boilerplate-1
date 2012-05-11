@@ -1,9 +1,9 @@
-from django.utils import unittest
+from django.test import TestCase
 from django.test.client import Client
 from django.core.urlresolvers import reverse
 
 
-class HomeTest(unittest.TestCase):
+class HomeTest(TestCase):
     def setUp(self):
         self.client = Client()
         self.url = reverse('core:home')
@@ -13,4 +13,4 @@ class HomeTest(unittest.TestCase):
 
     def test_status_code(self):
         response = self.client.get(self.url)
-        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'It works Jim!')
